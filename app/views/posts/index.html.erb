@@ -2,7 +2,9 @@
   <ul>  
     <li>
       <h3><%= post.title %></h3>
-      <%= post.body %>
+      <%= post.body %><br>
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+      <% end %>
     </li>
-  </ul>
-<% end %>
+  </ul><% end %>
